@@ -1,29 +1,74 @@
-# Create T3 App
+# Crypto Order
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+So this application is designed to be a clone of a QR code ordering system similiar to Me&u ordering for restaurants. A restaurant both singular or franchise will be able to create an account, add one or multiple food outlets then they will be able to create a menu with different categories such as Specials, entrees, mains desserts and custom ones. they then will be able to create, update, delete menu items and assign menu items to outlets.
 
-## What's next? How do I make an app with this?
+## KEY METRICS
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- A restaurant can add food venues with venue_Ids and table_numbers_Ids
+- A restaurant can create a menu
+- A restaurant can create food items and assign them to a menu
+- A restaurant can assign menus to food venues
+- This app will prodominently be used with phones and small devices
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## PAGES
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- Company landing page
 
-## Learn More
+  - Signup (I will handle wallet creatation for the company)
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+    - 2FA Auth
+    - Forgot Password
+    - Create a new account
+    - Business Home page
+      - Add a venue (also include venue specific info)
+      - Create a menu (ability to create custom fields, ability to have a menu bar)
+      - Create a food item (Includes images, description, price)
+    - View your menu Page
+    - Current Orders
+      - View single order
+      - Refund Order
+    - Settings
+      - Wallet
+      - Orders
+      - Accounts
+        - Access Controls
+      - Notifications
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+  - Customer portal
+    - View Menu
+    - Cart
+    - Checkout
+    - Successful Order
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## ROUTES
 
-## How do I deploy this?
+- Restaurant CRUD
+- Venue CRUD
+- Menu CRUD
+- Food Item CRUD
+- Orders CRUD
+- Payments (Pay, Refund)
+- Notifications (Email, 2FA, ect)
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## WEB3 Fuctions
+
+- Process a transaction
+- Refund a transaction
+
+## SCHEMAS
+
+- Restaurant
+- Venue
+- Menu
+- Food Item
+- Order
+- Payment
+- Refund
+
+### STACK
+
+- NextJs
+- Trpc
+- Thirdweb
+- Typescript
+- MongoDB

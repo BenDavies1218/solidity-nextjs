@@ -17,12 +17,14 @@ const posts: Post[] = [
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
-    .query(({ input }) => {
+    .query(async ({ input }) => {
+      // Simulate a delay (e.g., 1 second) to test the loading state
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       return {
         greeting: `Hello ${input.text}`,
       };
     }),
-
   create: publicProcedure
     .input(z.object({ name: z.string().min(1) }))
     .mutation(async ({ input }) => {
