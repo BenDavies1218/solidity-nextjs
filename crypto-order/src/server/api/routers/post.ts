@@ -18,8 +18,8 @@ export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
     .query(async ({ input }) => {
-      // Simulate a delay (e.g., 1 second) to test the loading state
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Simulate a delay (e.g., 5 second) to test the loading state
+      await new Promise((resolve) => setTimeout(resolve, 5000));
 
       return {
         greeting: `Hello ${input.text}`,
